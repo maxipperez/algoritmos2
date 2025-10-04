@@ -34,11 +34,11 @@ def insertR(node,word,index):
     existingNode = searchNode(node.children, currentChar)
 
     if existingNode == None: 
-        newTrie = TrieNode()
-        newTrie.key = currentChar
-        newTrie.children = LinkedList()
-        add(node.childre, newTrie)
-        insertR(newTrie, word, index + 1)
+        newTrieNode = TrieNode()
+        newTrieNode.key = currentChar
+        newTrieNode.children = LinkedList()
+        add(node.children, newTrieNode)
+        insertR(newTrieNode, word, index + 1)
     else: 
         insertR(existingNode, word, index + 1)
 
